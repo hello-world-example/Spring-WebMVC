@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WebRequestInterceptor 与HandlerInterceptor接口类似，区别是WebRequestInterceptor的preHandle没有返回值。 还有就是WebRequestInterceptor是针对请求的，接口方法参数中没有response。
+import org.springframework.ui.ModelMap; import org.springframework.web.context.request.WebRequest; import org.springframework.web.context.request.WebRequestInterceptor; public class RequestInterceptor implements WebRequestInterceptor { @Override public void preHandle(WebRequest webRequest) throws Exception { } @Override public void postHandle(WebRequest webRequest, ModelMap modelMap) throws Exception { } @Override public void afterCompletion(WebRequest webRequest, Exception e) throws Exception { } } 配置生效 Bean Config import org.springframework.stereotype.Component; import org.springframework.web.servlet.config.annotation.InterceptorRegistry; import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter; @Component public class AllInterceptor extends WebMvcConfigurerAdapter { @Override public void addInterceptors(InterceptorRegistry registry) { // 拦截所有  // 排除 /login/**  registry."><meta property="og:title" content="" />
+<meta property="og:description" content="WebRequestInterceptor 与HandlerInterceptor接口类似，区别是WebRequestInterceptor的preHandle没有返回值。 还有就是WebRequestInterceptor是针对请求的，接口方法参数中没有response。
+import org.springframework.ui.ModelMap; import org.springframework.web.context.request.WebRequest; import org.springframework.web.context.request.WebRequestInterceptor; public class RequestInterceptor implements WebRequestInterceptor { @Override public void preHandle(WebRequest webRequest) throws Exception { } @Override public void postHandle(WebRequest webRequest, ModelMap modelMap) throws Exception { } @Override public void afterCompletion(WebRequest webRequest, Exception e) throws Exception { } } 配置生效 Bean Config import org.springframework.stereotype.Component; import org.springframework.web.servlet.config.annotation.InterceptorRegistry; import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter; @Component public class AllInterceptor extends WebMvcConfigurerAdapter { @Override public void addInterceptors(InterceptorRegistry registry) { // 拦截所有  // 排除 /login/**  registry." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Interceptor/WebRequestInterceptor/" />
+
+<title>Web Request Interceptor | Spring-WebMVC</title>
+<link rel="icon" href="/Spring-WebMVC/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/Spring-WebMVC/book.min.d436f463c9471cfab26a8b71cd2f50b6abf5225806391453da4ca111d1834fef.css" integrity="sha256-1Db0Y8lHHPqyaotxzS9Qtqv1IlgGORRT2kyhEdGDT&#43;8=">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/Spring-WebMVC"><span>Spring-WebMVC</span>
+  </a>
+</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li>
+<p>
+  <a href="/Spring-WebMVC/docs/spring-webmvc/WebMvcConfigurerAdapter/">_WebMvcConfigurerAdapter</a></p>
+</li>
+<li>
+<p><strong>Filter</strong></p>
+<ul>
+<li>
+  <a href="/Spring-WebMVC/docs/spring-webmvc/Filter/OncePerRequestFilter/">OncePerRequestFilter</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Interceptor</strong></p>
+<ul>
+<li>
+  <a href="/Spring-WebMVC/docs/spring-webmvc/Interceptor/HandlerInterceptor/">HandlerInterceptor</a></li>
+<li>
+  <a href="/Spring-WebMVC/docs/spring-webmvc/Interceptor/WebRequestInterceptor/"class=active>WebRequestInterceptor</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/Spring-WebMVC/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Web Request Interceptor</strong>
+
+  <label for="toc-control">
+    <img src="/Spring-WebMVC/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#webrequestinterceptor">WebRequestInterceptor</a>
+      <ul>
+        <li><a href="#配置生效">配置生效</a>
+          <ul>
+            <li><a href="#bean-config">Bean Config</a></li>
+          </ul>
+        </li>
+        <li><a href="#read-more">Read More</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="webrequestinterceptor">WebRequestInterceptor</h1>
+<p>与<code>HandlerInterceptor</code>接口类似，区别是<code>WebRequestInterceptor</code>的<code>preHandle</code>没有返回值。
+还有就是<code>WebRequestInterceptor</code>是针对请求的，接口方法参数中没有<code>response</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.springframework.ui.ModelMap<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.web.context.request.WebRequest<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.web.context.request.WebRequestInterceptor<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RequestInterceptor</span> <span style="color:#66d9ef">implements</span> WebRequestInterceptor <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preHandle</span><span style="color:#f92672">(</span>WebRequest webRequest<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">postHandle</span><span style="color:#f92672">(</span>WebRequest webRequest<span style="color:#f92672">,</span> ModelMap modelMap<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afterCompletion</span><span style="color:#f92672">(</span>WebRequest webRequest<span style="color:#f92672">,</span> Exception e<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="配置生效">配置生效</h2>
+<h3 id="bean-config">Bean Config</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.springframework.stereotype.Component<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.web.servlet.config.annotation.InterceptorRegistry<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AllInterceptor</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurerAdapter <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addInterceptors</span><span style="color:#f92672">(</span>InterceptorRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 拦截所有
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 排除 /login/**
+</span><span style="color:#75715e"></span>        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addWebRequestInterceptor</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RequestInterceptor<span style="color:#f92672">()).</span><span style="color:#a6e22e">addPathPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/**&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">excludePathPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/login/**&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>   
+</code></pre></div><h2 id="read-more">Read More</h2>
+<ul>
+<li>
+  <a href="https://www.cnblogs.com/fangjian0423/p/springMVC-interceptor.html">SpringMVC拦截器详解[附带源码分析]</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hello-world-example/Spring-WebMVC/edit/master/HuGo/content/docs/spring-webmvc/Interceptor/WebRequestInterceptor.md" target="_blank" rel="noopener">
+      <img src="/Spring-WebMVC/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+<script>
+var images = document.getElementsByTagName("img")
+console.info(images.length)
+for(var i=0; i<images.length; i++){
+  var image = images[i]
+  var src = image.getAttribute("src");
+  if(src.startsWith("-images")){
+    image.setAttribute("src", "../" + src)
+  }
+}
+</script>
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#webrequestinterceptor">WebRequestInterceptor</a>
+      <ul>
+        <li><a href="#配置生效">配置生效</a>
+          <ul>
+            <li><a href="#bean-config">Bean Config</a></li>
+          </ul>
+        </li>
+        <li><a href="#read-more">Read More</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

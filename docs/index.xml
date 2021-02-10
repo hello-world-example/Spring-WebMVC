@@ -1,189 +1,65 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on Template-Hugo</title>
-    <link>https://hello-world-example.github.io/Template-Hugo/</link>
-    <description>Recent content in Introduction on Template-Hugo</description>
+    <title>Spring on Spring-WebMVC</title>
+    <link>https://hello-world-example.github.io/Spring-WebMVC/</link>
+    <description>Recent content in Spring on Spring-WebMVC</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://hello-world-example.github.io/Template-Hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hello-world-example.github.io/Spring-WebMVC/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>With ToC</title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/example/table-of-contents/with-toc/</link>
+      <title></title>
+      <link>https://hello-world-example.github.io/Spring-WebMVC/_sidebar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/example/table-of-contents/with-toc/</guid>
-      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
- Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
-    </item>
-    
-    <item>
-      <title>Without ToC</title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/example/table-of-contents/without-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/example/table-of-contents/without-toc/</guid>
-      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://hello-world-example.github.io/Template-Hugo/posts/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/posts/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://hello-world-example.github.io/Template-Hugo/posts/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/posts/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://hello-world-example.github.io/Template-Hugo/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://hello-world-example.github.io/Template-Hugo/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>https://hello-world-example.github.io/Spring-WebMVC/_sidebar/</guid>
+      <description>   _WebMvcConfigurerAdapter
+  Filter
+  OncePerRequestFilter    Interceptor
+  HandlerInterceptor  WebRequestInterceptor    </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/_sidebar/</link>
+      <link>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Filter/OncePerRequestFilter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hello-world-example.github.io/Template-Hugo/_sidebar/</guid>
-      <description>   Example Site
-   Table of Contents
-  With ToC  Without ToC     Collapsed
-  3rd   4th       Shortcodes
-   Buttons
-   Columns
-   Expand
-   Hints
-   Katex
-   Mermaid
-   Tabs   </description>
+      <guid>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Filter/OncePerRequestFilter/</guid>
+      <description>OncePerRequestFilter OncePerRequestFilter继承自GenericFilterBean，所以我们知道，genericFilterBean是任何类型的过滤器的一个比较方便的超类， 这个类主要实现的就是从web.xml文件中取得init-param中设定的值，然后对Filter进行初始化（当然，其子类可以覆盖init方法）。
+OncePerRequestFilter继承自GenericFilterBean，那么它自然知道怎么去获取配置文件中的属性及其值， 所以其重点不在于取值，而在于确保在接收到一个request后，每个filter只执行一次，它的子类只需要关注Filter的具体实现即doFilterInternal。
+AbstractRequestLoggingFilter是对OncePerRequestFilter的扩展，它除了遗传了其父类及祖先类的所有功能外，还在doFilterInternal中决定了在过滤之前和之后执行的事件，它的子类关注的是beforeRequest和afterRequest。
+总体来说，这三个类分别执行了Filter的某部分功能，当然，具体如何执行由它们的子类规定，若你需要实现自己的过滤器，也可以根据上文所述继承你所需要的类。
+import org.springframework.stereotype.Component; import org.springframework.web.filter.OncePerRequestFilter; import javax.servlet.FilterChain; import javax.servlet.ServletException; import javax.servlet.annotation.WebFilter; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; import java.io.IOException; @Component @WebFilter(urlPatterns = &amp;#34;/**&amp;#34;, filterName = &amp;#34;allFilter&amp;#34;) public class MyFilter extends OncePerRequestFilter { @Override protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException { System.out.println(&amp;#34;before&amp;#34;); filterChain.doFilter(httpServletRequest, httpServletResponse); System.out.println(&amp;#34;after&amp;#34;); } } Read More   Spring MVC过滤器-超类  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/example/collapsed/3rd-level/4th-level/</link>
+      <link>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Interceptor/HandlerInterceptor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/example/collapsed/3rd-level/4th-level/</guid>
-      <description>4th Level of Menu Caesorum illa tu sentit micat vestes papyriferi Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
-Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto! Sedes ante dum superest extrema.</description>
+      <guid>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Interceptor/HandlerInterceptor/</guid>
+      <description>HandlerInterceptor package xyz.kail.demo.mvc.interceptor; import org.springframework.web.servlet.HandlerInterceptor; import org.springframework.web.servlet.ModelAndView; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; public class SpringMVCInterceptor implements HandlerInterceptor { /** * 该方法将在Controller处理之前进行调用，SpringMVC中的Interceptor拦截器是链式的，可以同时存在 多个Interceptor， * 然后SpringMVC会根据声明的前后顺序一个接一个的执行，而且所有的Interceptor中的preHandle方法都会在 Controller方法调用之前调用。 * SpringMVC的这种Interceptor链式结构也是可以进行中断的，这种中断方式是令preHandle的返回值为false，当preHandle的返回值为false的时候整个请求就结束了。 */ @Override public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception { return true; } /** * 在当前请求进行处理之后，也就是Controller 方法调用之后执行，但是它会在DispatcherServlet 进行视图返回渲染之前被调用， * 所以我们可以在这个方法中对Controller 处理之后的ModelAndView 对象进行操作。 * postHandle 方法被调用的方向跟preHandle 是相反的，也就是说先声明的Interceptor 的postHandle 方法反而会后执行， */ @Override public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception { } /** * 该方法将在整个请求结束之后，也就是在DispatcherServlet 渲染了对应的视图之后执行。 * 这个方法的主要作用是用于进行资源清理工作的。 */ @Override public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception { } } 拦截器生效 XML &amp;lt;beans xmlns=&amp;#34;http://www.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/example/hidden/</link>
+      <link>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Interceptor/WebRequestInterceptor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/example/hidden/</guid>
-      <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
- Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
+      <guid>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Interceptor/WebRequestInterceptor/</guid>
+      <description>WebRequestInterceptor 与HandlerInterceptor接口类似，区别是WebRequestInterceptor的preHandle没有返回值。 还有就是WebRequestInterceptor是针对请求的，接口方法参数中没有response。
+import org.springframework.ui.ModelMap; import org.springframework.web.context.request.WebRequest; import org.springframework.web.context.request.WebRequestInterceptor; public class RequestInterceptor implements WebRequestInterceptor { @Override public void preHandle(WebRequest webRequest) throws Exception { } @Override public void postHandle(WebRequest webRequest, ModelMap modelMap) throws Exception { } @Override public void afterCompletion(WebRequest webRequest, Exception e) throws Exception { } } 配置生效 Bean Config import org.springframework.stereotype.Component; import org.springframework.web.servlet.config.annotation.InterceptorRegistry; import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter; @Component public class AllInterceptor extends WebMvcConfigurerAdapter { @Override public void addInterceptors(InterceptorRegistry registry) { // 拦截所有  // 排除 /login/**  registry.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/buttons/</link>
+      <link>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/WebMvcConfigurerAdapter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/buttons/</guid>
-      <description>Buttons Buttons are styled links that can lead to local page or external link.
-Example {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}}  Get Home  Contribute  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/columns/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/columns/</guid>
-      <description>Columns Columns help organize shorter pieces of content horizontally for readability.
-{{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic sparator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic sparator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example Left Content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/expand/</guid>
-      <description>Expand Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
-Example Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/hints/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/hints/</guid>
-      <description>Hints Hint shortcode can be used as hint/alerts/notification block.
-There are 3 colors to choose: info, warning and danger.
-{{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example Markdown content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa  Markdown content</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/katex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/katex/</guid>
-      <description>KaTeX KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
-Example {{&amp;lt; katex [display] [class=&amp;#34;text-center&amp;#34;] &amp;gt;}} x = \begin{cases} a &amp;amp;\text{if } b \\ c &amp;amp;\text{if } d \end{cases} {{&amp;lt; /katex &amp;gt;}}     \( x = \begin{cases} a &amp;\text{if } b \\ c &amp;\text{if } d \end{cases} \)    Display Mode Example Here is some inline example: \(\pi(x)\)  , rendered in the same line.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/mermaid/</guid>
-      <description>Mermaid Chart  Mermaid is library for generating svg charts and diagrams from text.
-Example {{&amp;lt; mermaid [class=&amp;#34;text-center&amp;#34;]&amp;gt;}} sequenceDiagram Alice-&amp;gt;&amp;gt;Bob: Hello Bob, how are you? alt is sick Bob-&amp;gt;&amp;gt;Alice: Not so good :( else is well Bob-&amp;gt;&amp;gt;Alice: Feeling fresh like a daisy end opt Extra response Bob-&amp;gt;&amp;gt;Alice: Thanks for asking end {{&amp;lt; /mermaid &amp;gt;}}    sequenceDiagram Alice-Bob: Hello Bob, how are you? alt is sick Bob-Alice: Not so good :( else is well Bob-Alice: Feeling fresh like a daisy end opt Extra response Bob-Alice: Thanks for asking end   </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/tabs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hello-world-example.github.io/Template-Hugo/docs/shortcodes/tabs/</guid>
-      <description>Tabs Tabs let you organize content by context, for example installation instructions for each supported platform.
-{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example MacOS MacOS This is tab MacOS content.
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
+      <guid>https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/WebMvcConfigurerAdapter/</guid>
+      <description>WebMvcConfigurerAdapter </description>
     </item>
     
   </channel>
