@@ -16,7 +16,7 @@ AbstractRequestLoggingFilter是对OncePerRequestFilter的扩展，它除了遗�
 import org.springframework.stereotype.Component; import org.springframework.web.filter.OncePerRequestFilter; import javax.servlet.FilterChain; import javax.servlet.ServletException; import javax.servlet.annotation.WebFilter; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; import java.io.IOException; @Component @WebFilter(urlPatterns = &#34;/**&#34;, filterName = &#34;allFilter&#34;) public class MyFilter extends OncePerRequestFilter { @Override protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException { System.out.println(&#34;before&#34;); filterChain.doFilter(httpServletRequest, httpServletResponse); System.out.println(&#34;after&#34;); } } Read More   Spring MVC过滤器-超类  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Filter/OncePerRequestFilter/" />
-
+<meta property="article:modified_time" content="2021-02-10T10:49:29+08:00" />
 <title>Once per Request Filter | Spring-WebMVC</title>
 <link rel="icon" href="/Spring-WebMVC/favicon.png" type="image/x-icon">
 
@@ -182,6 +182,14 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/hello-world-example/Spring-WebMVC/commit/0396875ecd345d49a2cd2d53b8103afc895eeafc" title='Last modified by kaibin.yang | Feb 10, 2021' target="_blank" rel="noopener">
+      <img src="/Spring-WebMVC/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 10, 2021</span>
+    </a>
+  </div>
+
 
 
   <div>
@@ -194,8 +202,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
  
-        
-<script>
+        <script>
 var images = document.getElementsByTagName("img")
 console.info(images.length)
 for(var i=0; i<images.length; i++){

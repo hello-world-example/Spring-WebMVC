@@ -10,7 +10,7 @@ import org.springframework.ui.ModelMap; import org.springframework.web.context.r
 import org.springframework.ui.ModelMap; import org.springframework.web.context.request.WebRequest; import org.springframework.web.context.request.WebRequestInterceptor; public class RequestInterceptor implements WebRequestInterceptor { @Override public void preHandle(WebRequest webRequest) throws Exception { } @Override public void postHandle(WebRequest webRequest, ModelMap modelMap) throws Exception { } @Override public void afterCompletion(WebRequest webRequest, Exception e) throws Exception { } } 配置生效 Bean Config import org.springframework.stereotype.Component; import org.springframework.web.servlet.config.annotation.InterceptorRegistry; import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter; @Component public class AllInterceptor extends WebMvcConfigurerAdapter { @Override public void addInterceptors(InterceptorRegistry registry) { // 拦截所有  // 排除 /login/**  registry." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hello-world-example.github.io/Spring-WebMVC/docs/spring-webmvc/Interceptor/WebRequestInterceptor/" />
-
+<meta property="article:modified_time" content="2021-02-10T10:49:29+08:00" />
 <title>Web Request Interceptor | Spring-WebMVC</title>
 <link rel="icon" href="/Spring-WebMVC/favicon.png" type="image/x-icon">
 
@@ -188,6 +188,14 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/hello-world-example/Spring-WebMVC/commit/0396875ecd345d49a2cd2d53b8103afc895eeafc" title='Last modified by kaibin.yang | Feb 10, 2021' target="_blank" rel="noopener">
+      <img src="/Spring-WebMVC/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 10, 2021</span>
+    </a>
+  </div>
+
 
 
   <div>
@@ -200,8 +208,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
  
-        
-<script>
+        <script>
 var images = document.getElementsByTagName("img")
 console.info(images.length)
 for(var i=0; i<images.length; i++){
